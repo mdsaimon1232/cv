@@ -4,17 +4,111 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV — MUSFIQUR RAHMAN SAIMON</title>
-  <meta name="description" content="CV of Musfiqur Rahman Saimon — tech-driven creator, automation builder, and lifelong student from Bangladesh." />
+  <meta name="description" content="CV of Musfiqur Rahman Saimon — Full-Stack Developer, automation builder, and lifelong student from Bangladesh." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="cv.css" />
+  <style>
+    /* Print-friendly CV stylesheet (A4) + nice on screen */
+    :root{
+      --text:#111418;
+      --muted:#4b5563;
+      --rule:#e5e7eb;
+      --accent:#0ea5e9;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:#fff;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .page{
+      width:min(900px,94%);
+      margin:36px auto;
+      padding:0 0 24px;
+    }
+
+    .header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      padding:6px 0 18px;
+      border-bottom:2px solid var(--rule);
+      flex-wrap: wrap; /* Added for smaller screens */
+    }
+    .title h1{
+      margin:0;
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:.3px;
+    }
+    .title p{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .contact{
+      list-style:none;
+      margin:0;
+      padding:0;
+      font-size:14px;
+    }
+    .contact li{margin:2px 0}
+    .contact a{color:var(--accent);text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+
+    .section{padding:16px 0;border-bottom:1px solid var(--rule)}
+    .section:last-of-type{border-bottom:none}
+    .section h2{
+      margin:0 0 8px;
+      font-size:16px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:#111;
+    }
+    .section p{margin:6px 0 10px}
+    .cols{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:8px 24px;
+    }
+    @media(min-width:700px){
+      .cols{grid-template-columns:1fr 1fr}
+    }
+    .bullets{margin:6px 0 0 18px; padding: 0;}
+    .bullets li{margin:4px 0}
+    .row{margin:8px 0}
+    .row h3 { margin: 0 0 4px; font-size: 15px;}
+    .row p { margin: 0; color: var(--muted);}
+    .project{margin:10px 0 14px}
+    .p-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .p-head h3{margin:0;font-size:15px}
+    .p-head a{font-size:13px;color:var(--accent);text-decoration:none}
+    .p-head a:hover{text-decoration:underline}
+    .certs{margin:0 0 0 18px; padding: 0;}
+    .certs li{margin:6px 0}
+
+    /* Print rules */
+    @media print{
+      .page{width:auto;margin:0;padding:0}
+      .section{break-inside:avoid}
+      /* Optional: Hide URLs in print if you prefer a cleaner look */
+      /* a[href^="http"]::after{content:" (" attr(href) ")"; font-size:12px; color:#6b7280} */
+      .header { flex-wrap: nowrap; }
+    }
+  </style>
 </head>
 <body>
   <main class="page">
     <header class="header">
       <div class="title">
         <h1>MUSFIQUR RAHMAN SAIMON</h1>
-        <p>Tech-driven creator • Automation builder • Lifelong student</p>
+        <p>Full-Stack Developer • Automation Specialist • Tech Creator</p>
       </div>
       <ul class="contact">
         <li><strong>Email:</strong> <a href="mailto:mdsaimon552723@gmail.com">mdsaimon552723@gmail.com</a></li>
@@ -28,13 +122,10 @@
     <section class="section">
       <h2>Profile</h2>
       <p>
-        I'm a <strong>Bangladeshi tech-driven creator, automation builder, and lifelong student</strong>.
-        I enjoy researching how <strong>open-source tools</strong>, <strong>automation</strong>, and <strong>artificial intelligence</strong>
-        can improve the intelligence and efficiency of real-world systems.
+        I am a <strong>Full-Stack Developer and Automation Specialist</strong> based in Bangladesh. I am passionate about building robust web applications and designing intelligent, automated workflows that solve real-world problems.
       </p>
       <p>
-        I build practical projects using <strong>n8n</strong>, <strong>Make.com</strong>, REST APIs, and AI automation pipelines, often blending them into
-        production-ready workflows. I value clarity, reliability, and community contribution.
+        My expertise lies in blending front-end and back-end technologies (like Node.js, Python, HTML/CSS/JS) with powerful automation platforms (n8n, Make.com) and AI integrations. I focus on creating scalable, efficient, and production-ready solutions while maintaining a strong commitment to open-source contributions.
       </p>
     </section>
 
@@ -42,60 +133,60 @@
       <h2>Skills</h2>
       <div class="cols">
         <ul>
-          <li><strong>Automation & Integration:</strong> n8n, Make.com (Integromat), Zapier</li>
-          <li><strong>APIs & Webhooks:</strong> REST API calls, data handling, automation triggers</li>
-          <li><strong>AI Tools & NLP:</strong> ChatGPT, Whisper, OpenAI API, content rewriting & verification</li>
+          <li><strong>Front-End Development:</strong> HTML5, CSS3, JavaScript (ES6+), Responsive Design Fundamentals</li>
+          <li><strong>Back-End & Scripting:</strong> Node.js, Express.js (basics), Python</li>
+          <li><strong>Databases & APIs:</strong> RESTful API Design & Integration, Webhooks, Data Handling</li>
         </ul>
         <ul>
-          <li><strong>Web & Scripting:</strong> HTML, CSS, JavaScript (basics), Node.js (fundamentals)</li>
-          <li><strong>Programming:</strong> Python (basics — automation, scripting)</li>
-          <li><strong>Cloud & Storage:</strong> Google Drive, GitHub hosting, local/cloud automation</li>
+          <li><strong>Automation Platforms:</strong> n8n, Make.com (Integromat), Zapier</li>
+          <li><strong>AI & NLP Integration:</strong> OpenAI API (ChatGPT, Whisper), AI Automation Pipelines</li>
+          <li><strong>Tools & Deployment:</strong> Git, GitHub, Local/Cloud Deployment, Environment Configuration</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <h2>Selected Projects</h2>
+      
       <div class="project">
         <div class="p-head">
-          <h3>n8n Workflows</h3>
-          <a href="https://github.com/mdsaimon1232/n8n-automation-hub" target="_blank" rel="noopener">Repo</a>
-        </div>
-        <p>
-          A curated set of production-ready workflows for content automation and integrations. Focus on reliability, clear node configs,
-          and README guides for quick adoption.
-        </p>
-        <ul class="bullets">
-          <li>Built with n8n; uses webhooks, queueing, and rate-limit safe triggers.</li>
-          <li>Emphasis on maintainable JSON exports and environment-variable driven creds.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div class="p-head">
-          <h3>TriCompare — ChatGPT × DeepSeek × Gemini</h3>
+          <h3>TriCompare — Multi-LLM Evaluation Dashboard</h3>
           <a href="https://github.com/mdsaimon1232/tri-compare" target="_blank" rel="noopener">Repo</a>
         </div>
         <p>
-          An in-browser tri-pane dashboard to compare responses across multiple LLMs, supporting quick iteration and prompt testing.
+          A full-stack web application featuring an in-browser tri-pane dashboard to simultaneously compare responses across ChatGPT, DeepSeek, and Gemini APIs.
         </p>
         <ul class="bullets">
-          <li>HTML/CSS/JS front-end with clean UI and layout controls.</li>
-          <li>Streamlines evaluation of prompts and response quality side-by-side.</li>
+          <li><strong>Front-end:</strong> Built with HTML, CSS, and JavaScript for a responsive, interactive UI with layout controls.</li>
+          <li><strong>Back-end/API:</strong> Manages complex asynchronous API calls and data rendering for side-by-side prompt evaluation.</li>
         </ul>
       </div>
 
       <div class="project">
         <div class="p-head">
-          <h3>Anime Downloader</h3>
+          <h3>Production-Ready n8n Workflows</h3>
+          <a href="https://github.com/mdsaimon1232/n8n-automation-hub" target="_blank" rel="noopener">Repo</a>
+        </div>
+        <p>
+          A comprehensive suite of automated workflows designed for content management and complex API integrations.
+        </p>
+        <ul class="bullets">
+          <li>Developed using n8n, incorporating webhooks, queue management, and rate-limiting strategies.</li>
+          <li>Emphasizes secure credential management via environment variables and scalable JSON architectures.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="p-head">
+          <h3>Automated Content Retrieval Script</h3>
           <a href="https://github.com/mdsaimon1232/anime" target="_blank" rel="noopener">Repo</a>
         </div>
         <p>
-          A simple tool to fetch and organize anime content for offline viewing (personal learning project).
+          A modular scripting tool engineered to fetch, organize, and manage media content programmatically.
         </p>
         <ul class="bullets">
-          <li>Focus on scripting basics, modular code, and predictable file handling.</li>
-          <li>Good example of practical automation with minimal dependencies.</li>
+          <li>Demonstrates proficiency in Python/Node.js scripting, file system operations, and automated task execution.</li>
+          <li>Focuses on modular architecture and predictable, error-handled data retrieval.</li>
         </ul>
       </div>
     </section>
@@ -135,10 +226,10 @@
     </section>
 
     <section class="section">
-      <h2>Interests & Hobbies</h2>
+      <h2>Interests & Open Source</h2>
       <ul class="bullets">
-        <li>Building <strong>free and open-source n8n workflows</strong> for learning and helping others.</li>
-        <li>Experimenting with <strong>AI tools</strong>, <strong>news fact-checking automation</strong>, and <strong>browser control AIs</strong>.</li>
+        <li>Actively developing and contributing <strong>free and open-source automation workflows</strong> and web utilities.</li>
+        <li>Exploring the intersection of <strong>AI and Full-Stack development</strong>, including browser control AIs and automated fact-checking systems.</li>
       </ul>
     </section>
   </main>
